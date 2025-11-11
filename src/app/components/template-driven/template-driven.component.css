@@ -1,0 +1,113 @@
+/* 🌿 Layout Styling */
+:host {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+  background: #f5f7fa;
+  min-height: 100vh;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+/* 🧾 Form Container */
+form {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 400px;
+  transition: all 0.3s ease;
+}
+
+/* 🧠 Heading */
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* 🏷️ Form Groups */
+div {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🧍 Labels */
+label {
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+  color: #444;
+  font-weight: 500;
+}
+
+/* ✏️ Input Fields */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 0.6rem 0.75rem;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.25s, box-shadow 0.25s;
+}
+
+input:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 6px rgba(25, 118, 210, 0.3);
+}
+
+/* 🚦 Validation Styles */
+input.ng-invalid.ng-touched {
+  border-color: #e53935;
+  background: #ffebee;
+}
+
+input.ng-valid.ng-touched {
+  border-color: #43a047;
+  background: #e8f5e9;
+}
+
+/* 💬 Error Message (optional for form template) */
+small.error {
+  color: #e53935;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+/* 🚀 Submit Button */
+button[type="submit"] {
+  width: 100%;
+  background-color: #1976d2;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.25s, transform 0.15s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0d47a1;
+  transform: translateY(-2px);
+}
+
+button[type="submit"]:disabled {
+  background-color: #90caf9;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* 📱 Responsive */
+@media (max-width: 480px) {
+  form {
+    padding: 1.5rem;
+  }
+}
