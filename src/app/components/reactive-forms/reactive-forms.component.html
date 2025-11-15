@@ -1,1 +1,24 @@
-<p>reactive-forms works!</p>
+<div>
+    <form [formGroup]="loginForm">
+        <div class="formGroup mb-2">
+            <label for="name">Name</label>
+            <input type="text" placeholder="enter a name" formControlName="name">
+        
+            <small *ngIf="this.loginForm.get('name')?.touched && this.loginForm.get('name')?.invalid">
+                name is Required
+            </small>
+        </div>
+         <div class="formGroup mb-2">
+            <label for="name" >email</label>
+            <input type="email" placeholder="enter an email" formControlName="email">
+             <small *ngIf="this.loginForm.get('email')?.touched && this.loginForm.get('email')?.invalid">
+                email is Required
+            </small>
+           
+        </div>
+        <div class="button-group">
+              <button type="reset">Reset</button>
+            <button type="submit" (click)="submit()" [disabled]="loginForm.invalid">Submit</button>
+        </div>
+    </form>
+</div>
