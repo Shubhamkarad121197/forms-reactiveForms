@@ -9,5 +9,5 @@ import {Component} from '@angular/core'
 
 export class myComponent{
 
-    name:string='shubham';
+    name:string='shubham'
 }
